@@ -1,0 +1,305 @@
+/*!
+ * KarinAgun v2
+ * Copyright 2020 Agun Buhori
+ * Licensed under our wedding (https://karin.buhori.com)
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  color: #666666;
+  font-family: 'Noto Serif', serif;
+}
+
+.swiper-container {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: transparent;
+  padding: 30px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 85%;
+}
+
+#mask1 {
+  width: 40%;
+  position: fixed;
+  right: -100%;
+  top: -100%;
+  transition: 500ms all;
+  height: 300px;
+  background-image: url("../img/mask1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: 999;
+}
+
+#mask2 {
+  width: 40%;
+  position: fixed;
+  left: -100%;
+  bottom: -100%;
+  transition: 500ms all;
+  height: 300px;
+  background-image: url("../img/mask2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  z-index: 999;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #d19e64;
+}
+
+#video {
+  transition: 500ms;
+}
+
+#flower {
+  animation: zoomIn 0.5s;
+  position: absolute;
+  width: 70%;
+  transform: rotate(3deg);
+}
+
+#couple {
+  position: absolute;
+  width: 25%;
+  transform: translateY(-15%) rotate(-3deg);
+  animation: smallIn 0.5s;
+}
+
+@keyframes zoomIn {
+  0% {
+    width: 30%;
+    opacity: 0;
+  }
+}
+
+@keyframes smallIn {
+  0% {
+    width: 30%;
+    opacity: 0;
+  }
+}
+
+@keyframes flower {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes couple {
+  0% {
+    transform: translateY(-15%) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-10%) rotate(3deg);
+  }
+  100% {
+    transform: translateY(-15%) rotate(-3deg);
+  }
+}
+
+h4, h5 {
+  margin: 0;
+}
+
+p {
+  font-size: 10px;
+  margin: 5px 0;
+}
+
+ul li, ol li {
+  font-size: 10px !important;
+  font-family: 'Noto Serif', serif;
+}
+
+.couple-name {
+  font-weight: bold;
+  color: #d19e64;
+  font-size: 14px;
+}
+
+.parent-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.date {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background-color: #F7EBE6;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  flex-direction: column;
+  z-index: 99;
+}
+
+.date-circle__date {
+  font-size: 30pt;
+}
+
+#date-flower1, #date-flower2 {
+  position: absolute;
+  width: 70px;
+  z-index: 1;
+}
+
+#date-flower1 {
+  left: 50%;
+  animation: date-flower1 6s infinite;
+  transform-origin: top left;
+}
+
+
+#date-flower2 {
+  right: 50%;
+  animation: date-flower2 6s infinite;
+  transform-origin: bottom left;
+}
+
+#karin_agun {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+#particles-js {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+}
+
+.location {
+  margin-top: 20px;
+  z-index: 999;
+  width: 100%;
+}
+
+.schedule {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.schedule-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.schedule-detail:first-child {
+  border-right: 1px solid #ddd;
+}
+
+#location {
+  height: 70%;
+  width: auto;
+}
+
+h4 {
+  margin-bottom: 10px;
+  font-size: smaller;
+}
+
+@keyframes date-flower1 {
+  0% {
+    transform: translateX(-120%) translateY(30%) rotate(10deg);
+  }
+  
+  50% {
+    transform: translateX(-120%) translateY(30%) rotate(-10deg);
+  }
+  
+  100% {
+    transform: translateX(-120%) translateY(30%) rotate(10deg);
+  }
+}
+
+@keyframes date-flower2 {
+  0% {
+    transform: translateX(130%) translateY(-30%) rotate(10deg);
+  }
+  
+  50% {
+    transform: translateX(130%) translateY(-30%) rotate(-10deg);
+  }
+  
+  100% {
+    transform: translateX(130%) translateY(-30%) rotate(10deg);
+  }
+}
+
+@media screen and (min-height: 720px) {
+  p, ul li, ol li, .parent-name {
+    font-size: 12px !important;
+  }
+
+  .couple-name {
+    font-size: 16px !important;
+  }
+
+  #location {
+    height: 60% !important;
+  }
+}
