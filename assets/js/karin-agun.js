@@ -40,9 +40,11 @@ window.onload = function () {
   
     if (index === lastSlide) {
       video.style.background = "#242424";
+      video.style.padding = '0';
       karinagun.play();
     } else {
       video.style.background = "transparent";
+      video.style.padding = '30px';
       karinagun.pause();
     }
   });  
